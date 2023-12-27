@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="575.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connection.seller.signin.home.sells.SellersellsController">
+   <children>
+      <AnchorPane layoutX="2.0" prefHeight="285.0" prefWidth="980.0">
+         <children>
+            <TextField fx:id="searchField" layoutX="68.0" layoutY="17.0" prefWidth="626.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIcon fill="#bfbfbf" glyphName="SEARCH" layoutX="674.0" layoutY="34.0" size="12px" />
+            <TableView fx:id="tableField" layoutX="68.0" layoutY="58.0" onMouseClicked="#getSelected" prefHeight="210.0" prefWidth="626.0">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="colNAME" prefWidth="156.800048828125" text="NAME" />
+                  <TableColumn fx:id="colTYPE" prefWidth="138.39999389648438" text="TYPE" />
+                  <TableColumn fx:id="colPRICE" prefWidth="138.4000244140625" text="PRICE" />
+                  <TableColumn fx:id="colQUANTITY" prefWidth="115.19998779296873" text="QUANTITY" />
+               </columns>
+            </TableView>
+            <TextField fx:id="midField" layoutX="816.0" layoutY="69.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="nameField" layoutX="816.0" layoutY="107.0" promptText="Product name" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <ComboBox fx:id="typeField" layoutX="815.0" layoutY="150.0" prefWidth="150.0" promptText="Choose" />
+            <TextField fx:id="priceField" layoutX="816.0" layoutY="189.0" promptText="0.0DH" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="qtyField" layoutX="816.0" layoutY="226.0" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="706.0" layoutY="111.0" text="Product Name :" />
+            <Label layoutX="706.0" layoutY="230.0" text="Quantity :" />
+            <FontAwesomeIcon fill="#127369" glyphName="CART_ARROW_DOWN" layoutX="14.0" layoutY="32.0" size="2em" />
+            <Label layoutX="706.0" layoutY="73.0" text="Medicine ID :" />
+            <Label layoutX="706.0" layoutY="193.0" text="Price :" />
+            <Label layoutX="706.0" layoutY="154.0" text="Type :" />
+            <Label fx:id="blankLabel" layoutX="758.0" layoutY="21.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="288.0" prefHeight="285.0" prefWidth="980.0">
+         <children>
+            <TextField fx:id="searchsellField" layoutX="62.0" layoutY="16.0" prefWidth="626.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+            <TableView fx:id="tablesellField" layoutX="62.0" layoutY="57.0" onMouseClicked="#getsellSelected" prefHeight="210.0" prefWidth="626.0">
+               <columns>
+                  <TableColumn fx:id="colID1" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="colNAME1" prefWidth="156.800048828125" text="NAME" />
+                  <TableColumn fx:id="colTYPE1" prefWidth="138.39999389648438" text="TYPE" />
+                  <TableColumn fx:id="colPRICE1" prefWidth="138.4000244140625" text="PRICE" />
+                  <TableColumn fx:id="colQUANTITY1" prefWidth="115.19998779296873" text="QUANTITY" />
+               </columns>
+            </TableView>
+            <FontAwesomeIcon fill="#bfbfbf" glyphName="SEARCH" layoutX="668.0" layoutY="33.0" size="12px" />
+            <Button id="green" layoutX="762.0" layoutY="-13.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Add">
+               <graphic>
+                  <FontAwesomeIcon glyphName="PLUS" />
+               </graphic>
+            </Button>
+            <Button id="green" layoutX="762.0" layoutY="162.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Delete">
+               <graphic>
+                  <FontAwesomeIcon glyphName="TRASH" />
+               </graphic>
+            </Button>
+            <Button id="green" layoutX="762.0" layoutY="201.0" mnemonicParsing="false" onAction="#imprimer" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Print">
+               <graphic>
+                  <FontAwesomeIcon glyphName="PRINT" />
+               </graphic>
+            </Button>
+            <Button id="green" fx:id="backButton" layoutX="859.0" layoutY="240.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Back">
+               <graphic>
+                  <FontAwesomeIcon glyphName="UNDO" />
+               </graphic>
+            </Button>
+            <TextField fx:id="midsellField" layoutX="770.0" layoutY="58.0" visible="false" />
+            <TextField fx:id="qtysellField" layoutX="728.0" layoutY="100.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

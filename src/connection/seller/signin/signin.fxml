@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connection.seller.signin.SigninController">
+   <children>
+      <AnchorPane prefHeight="575.0" prefWidth="308.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="278.0" text="Sign up if you're not a member" textAlignment="CENTER" textFill="#127369">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Button id="green" fx:id="signupButton" layoutX="91.0" layoutY="357.0" mnemonicParsing="false" onAction="#signup" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Sign Up" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="74.0" layoutY="304.0" text="of our pharmacy" textAlignment="CENTER" textFill="#127369">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#127369" glyphName="USER_PLUS" layoutX="116.0" layoutY="232.0" size="6em" textAlignment="CENTER" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="311.0" prefHeight="575.0" prefWidth="358.0" style="-fx-background-color: #127369;">
+         <children>
+            <Label layoutX="61.0" layoutY="255.0" text="Welcome, Pharmacist !" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="89.0" layoutY="329.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="pwdField" layoutX="89.0" layoutY="371.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button id="green" fx:id="signinButton" layoutX="126.0" layoutY="412.0" mnemonicParsing="false" onAction="#signin" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Sign In" />
+            <Label fx:id="wrongLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="305.0" textAlignment="CENTER" textFill="RED" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="118.0" layoutY="232.0" size="13em" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="669.0" prefHeight="575.0" prefWidth="308.0">
+         <children>
+            <Button fx:id="cancelButton" layoutX="236.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancel" prefHeight="5.0" prefWidth="58.0" text="X">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="12.0" />
+               </font></Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="288.0" text="Reserved for Admin" textAlignment="CENTER" textFill="#127369">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Button id="green" fx:id="adminButton" layoutX="91.0" layoutY="367.0" mnemonicParsing="false" onAction="#adminconfirm" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="PIN" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="101.0" layoutY="310.0" text="Sing In/Up" textAlignment="CENTER" textFill="#127369">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#127369" glyphName="KEY" layoutX="116.0" layoutY="242.0" size="6em" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="575.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connection.admin.signin.home.history.HistoryController">
+   <children>
+      <FontAwesomeIcon fill="#127369" glyphName="HISTORY" layoutX="14.0" layoutY="35.0" size="2em" />
+      <TextField fx:id="searchField" layoutX="177.0" layoutY="25.0" onAction="#searchTable" prefWidth="626.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIcon fill="#bfbfbf" glyphName="SEARCH" layoutX="783.0" layoutY="42.0" size="12px" />
+      <TableView fx:id="tableField" layoutX="12.0" layoutY="68.0" onMouseClicked="#getSelected" prefHeight="450.0" prefWidth="955.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colNAME" prefWidth="156.800048828125" text="NAME" />
+            <TableColumn fx:id="colTYPE" prefWidth="159.199951171875" text="TYPE" />
+            <TableColumn fx:id="colPRICE" prefWidth="141.60003662109375" text="PRICE" />
+            <TableColumn fx:id="colQUANTITY" prefWidth="143.199951171875" text="QUANTITY" />
+            <TableColumn fx:id="colTOTAL" prefWidth="140.800048828125" text="TOTAL" />
+            <TableColumn fx:id="colDATE" prefWidth="136.00006103515625" text="DATE" />
+         </columns>
+      </TableView>
+      <Button id="green" fx:id="backButton" layoutX="859.0" layoutY="534.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Back">
+         <graphic>
+            <FontAwesomeIcon glyphName="UNDO" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connection.admin.signin.home.stock.StockController">
+   <children>
+      <TableView fx:id="tableField" layoutX="339.0" layoutY="89.0" onMouseClicked="#getSelected" prefHeight="472.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colNAME" prefWidth="156.800048828125" text="NAME" />
+            <TableColumn fx:id="colTYPE" prefWidth="138.39999389648438" text="TYPE" />
+            <TableColumn fx:id="colPRICE" prefWidth="138.4000244140625" text="PRICE" />
+            <TableColumn fx:id="colQUANTITY" prefWidth="139.20001220703125" text="QUANTITY" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchField" layoutX="339.0" layoutY="40.0" prefWidth="626.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #127369; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIcon fill="#bfbfbf" glyphName="SEARCH" layoutX="942.0" layoutY="57.0" size="12px" />
+      <AnchorPane prefHeight="575.0" prefWidth="315.0" style="-fx-background-color: #127369;">
+         <children>
+            <TextField fx:id="midField" layoutX="151.0" layoutY="94.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="nameField" layoutX="151.0" layoutY="139.0" promptText="Product name " style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <ComboBox fx:id="typeField" layoutX="150.0" layoutY="188.0" prefWidth="150.0" promptText="Choose" />
+            <TextField fx:id="priceField" layoutX="150.0" layoutY="241.0" promptText="0.0DH" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="qtyField" layoutX="151.0" layoutY="291.0" promptText="Quantity" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="44.0" layoutY="143.0" text="Product Name :" />
+            <Label layoutX="44.0" layoutY="245.0" text="Price :" />
+            <Label layoutX="41.0" layoutY="295.0" text="Quantity :" />
+            <Label layoutX="41.0" layoutY="98.0" text="Medicine ID :" />
+            <Button id="green" layoutX="97.0" layoutY="369.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Add">
+               <graphic>
+                  <FontAwesomeIcon glyphName="PLUS" />
+               </graphic></Button>
+            <Label layoutX="41.0" layoutY="192.0" text="Type :" />
+            <Button id="green" layoutX="97.0" layoutY="410.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Update">
+               <graphic>
+                  <FontAwesomeIcon glyphName="EDIT" />
+               </graphic></Button>
+            <Button id="green" layoutX="98.0" layoutY="454.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Delete">
+               <graphic>
+                  <FontAwesomeIcon glyphName="TRASH" />
+               </graphic></Button>
+            <Button id="green" fx:id="backButton" layoutX="97.0" layoutY="513.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="106.0" stylesheets="@stylesheet.css" text="Back">
+               <graphic>
+                  <FontAwesomeIcon glyphName="UNDO" />
+               </graphic></Button>
+            <FontAwesomeIcon glyphName="FILE" layoutX="14.0" layoutY="35.0" size="2em" />
+            <Label fx:id="blankLabel" layoutX="94.0" layoutY="46.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
